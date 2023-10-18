@@ -18,6 +18,8 @@ import {
   MdPerson,
   MdLock,
 } from "react-icons/md";
+import Students from "views/admin/students";
+import DataTable from "views/admin/tables/components/AdvancedSearch";
 
 const routes = [
   {
@@ -25,7 +27,7 @@ const routes = [
     layout: "/admin",
     path: "students",
     icon: <MdPerson className="h-6 w-6" />,
-    component: <MainDashboard />,
+    component: <Students />,
   },
   {
     name: "Classes",
