@@ -4,11 +4,10 @@ import { Datatable, initTE } from 'tw-elements';
 // Initialize TE (Tailwind Elements) with Datatable
 initTE({ Datatable });
 
-const DataTable = ({data}) => {
+const DataTable = ({ data }) => {
   const datatableRef = useRef(null);
 
   useEffect(() => {
-    
     // Initialize Datatable with the data and the DOM element
     const instance = new Datatable(datatableRef.current, data);
 
@@ -28,7 +27,7 @@ const DataTable = ({data}) => {
 
   return (
     <div>
-      <div className="mb-3">
+      <div className="mb-3 mt-3">
         <div className="relative mb-4 flex w-full flex-wrap items-stretch">
           <input
             id="datatable-search-input"
@@ -41,7 +40,7 @@ const DataTable = ({data}) => {
 
           {/* Search button */}
           <button
-            className="relative z-[2] flex items-center rounded-r bg-primary px-6 py-2.5 text-xs font-medium uppercase leading-tight text-white shadow-md transition duration-150 ease-in-out hover:bg-primary-700 hover:shadow-lg focus:bg-primary-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-primary-800 active:shadow-lg"
+            className="relative z-[2] flex items-center rounded bg-black px-3 py-2.5 text-xs font-medium uppercase leading-tight text-white shadow-md transition duration-150 ease-in-out bg-blue-500 focus:bg-blue-500 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-700 active:shadow-lg ml-2"
             type="button"
             id="advanced-search-button"
             data-te-ripple-init
@@ -59,6 +58,19 @@ const DataTable = ({data}) => {
                 clipRule="evenodd"
               />
             </svg>
+          </button>
+
+          {/* Add New button */}
+          <button
+            className="relative z-[2] flex items-center rounded bg-black px-3 py-2.5 text-xs font-medium uppercase leading-tight text-white shadow-md transition duration-150 ease-in-out bg-blue-500 focus:bg-blue-500 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-700 active:shadow-lg ml-3 mr-1"
+            type="button"
+            id="add-new-button"
+            onClick={() => {
+              // Handle the click event to open the form in the future
+              // You can implement the form display logic here
+            }}
+          >
+            Add New
           </button>
         </div>
       </div>
