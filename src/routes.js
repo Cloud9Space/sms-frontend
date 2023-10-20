@@ -6,6 +6,7 @@ import NFTMarketplace from "views/admin/marketplace";
 import Profile from "views/admin/profile";
 import DataTables from "views/admin/tables";
 import RTLDefault from "views/rtl/default";
+import Dashboard from "views/admin/Dashboard"
 
 // Auth Imports
 import SignIn from "views/auth/SignIn";
@@ -23,6 +24,14 @@ import Classes from "views/admin/classes";
 import DataTable from "views/admin/tables/components/AdvancedSearch";
 
 const routes = [
+  {
+    name:"Dashboard",
+    layout:"/admin",
+    path:"dashboard",
+    icon:<MdPerson className="h-6 w-6"/>,
+    component:<Dashboard/>
+  },
+
   {
     name: "Students",
     layout: "/admin",
