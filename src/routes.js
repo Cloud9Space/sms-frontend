@@ -6,6 +6,7 @@ import NFTMarketplace from "views/admin/marketplace";
 import Profile from "views/admin/profile";
 import DataTables from "views/admin/tables";
 import RTLDefault from "views/rtl/default";
+import Dashboard from "views/admin/Dashboard"
 
 // Auth Imports
 import SignIn from "views/auth/SignIn";
@@ -21,15 +22,34 @@ import {
 import Students from "views/admin/students";
 import Classes from "views/admin/classes";
 import DataTable from "views/admin/tables/components/AdvancedSearch";
+import Form from "views/admin/Form/Form";
+import StudentForm from "views/admin/students/components/StudentForm";
+import ReusableForm from "views/admin/Form/Form1";
+import Admissions from "views/admin/admission";
 
 const routes = [
+  {
+    name:"Dashboard",
+    layout:"/admin",
+    path:"dashboard",
+    icon:<MdPerson className="h-6 w-6"/>,
+    component:<Dashboard/>
+  },
+  {
+    name: "Admissions",
+    layout: "/admin",
+    path: "admissions",
+    icon: <MdPerson className="h-6 w-6" />,
+    component: <Admissions />,
+  },
   {
     name: "Students",
     layout: "/admin",
     path: "students",
     icon: <MdPerson className="h-6 w-6" />,
-    component: <Students />,
+    component: <ReusableForm />,
   },
+ 
   {
     name: "Classes",
     layout: "/admin",
