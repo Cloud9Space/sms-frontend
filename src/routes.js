@@ -45,7 +45,7 @@ const routes = [
   {
     name: "Students",
     layout: "/admin",
-    path: "students/re-f",
+    path: "students",
     icon: <MdPerson className="h-6 w-6" />,
     component: <ReusableForm />,
   },
