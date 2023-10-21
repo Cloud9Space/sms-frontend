@@ -22,6 +22,7 @@ import {
 import Students from "views/admin/students";
 import Classes from "views/admin/classes";
 import DataTable from "views/admin/tables/components/AdvancedSearch";
+import Admissions from "views/admin/admission";
 
 const routes = [
   {
@@ -31,7 +32,13 @@ const routes = [
     icon:<MdPerson className="h-6 w-6"/>,
     component:<Dashboard/>
   },
-
+  {
+    name: "Admissions",
+    layout: "/admin",
+    path: "admissions",
+    icon: <MdPerson className="h-6 w-6" />,
+    component: <Admissions />,
+  },
   {
     name: "Students",
     layout: "/admin",
