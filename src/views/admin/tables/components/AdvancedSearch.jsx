@@ -78,5 +78,4 @@ const DataTable = ({ data }) => {
     </div>
   );
 };
-
 export default DataTable;
